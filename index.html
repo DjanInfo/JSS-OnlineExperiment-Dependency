@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>How Does Feature Dependency Affect Configurable System Comprehensibility?</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+
+<body class="style.css">
+
+<table width="100%" border="0">
+
+  <tr>
+
+    <td width="15%" bgcolor="#CCCCCC">&nbsp;</td>
+
+    <td><table width="100%">
+
+      <tr>
+
+        <td width="200">&nbsp;</td>
+
+        <td width="625"><h2 align="center">A survey on how feature dependency affects program comprehensibility.</h2></td>
+
+        <td width="200">&nbsp;</td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><h3>Author : Djan Santos, Cláudio Sant'Anna and Márcio Ribeiro</h3></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><h3>Abstract :</h3></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table cellspacing="0" id="ec:table1" cellpadding="0">
+
+          <tbody>
+
+            <tr id="row18">
+
+              <td align="justify"><br />
+                <strong>Background</strong>:Conditional compilation is often used to implement variability in configurable systems. This technique relies on \#ifdefs to delimit feature code. Previous studies have shown that \#ifdefs may hinder code comprehensibility. However, they did not explicitly took feature dependencies into account. Feature dependency occurs when different features refer to the same program element, such as a variable. Comprehensibility may be even more affected in the presence of feature dependency, as the developer must reason about different scenarios affecting the same variable. <strong>Aim:</strong> Our goal is to understand how feature dependency affects the comprehensibility of configurable system source code. <strong>Method:</strong> Forty-six developers responded an online survey. They executed tasks in which they had to analyze programs containing \#ifdef with and without feature dependency. Each program with feature dependency contained all the three types of features dependency as frequently occurs in real configurable systems. <strong>Results:</strong> Participants analyzing programs containing \#ifdef and feature dependency required more time than programs containing \#ifdef but without feature dependency. <strong>Conclusion:</strong> Our study showed that \#ifdefs affect comprehensibility of configurable systems in different degrees depending on the presence of feature dependency.</td>
+
+            </tr>
+
+          </tbody>
+
+        </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">&nbsp;</td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">
+
+          <strong>Procedure:</strong>
+
+          <p> 1 - The participants chooses the language she or he prefers. <br />
+            2 - We explained the goal of the survey and our research goals. We also informed the participants about the time estimated to finish the survey, and then, asked the respondents for their informed consent. <br />
+            3 -  Each participant had to understand and realize the mental execution of two programs. Each participant also had to execute three tasks concerning each program. The participants were not allowed to proceed to the next task until they correctly answered the task in progress. <br />
+            4 - After the question, there is a field and a button for the participant to enter his or her answer.<br />
+            5 - After answering the three tasks of one of the programs in Domain 1, participants were redirected to one of the two programs in Domain 2.<br />
+            6 - Finally, when a participant finished all the tasks, the survey asked her or him some questions to obtain qualitative feedback on how she or he performed the tasks. We have also asked participants about their profiles.
+            <br />
+          </p></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><a href="index_aberto.php" target="_blank">link to access the survey (new answers not be considered)</a></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">Source codes of our experiment: <br />
+          <em>Rows = Participants, <br />
+Column = Domains, <br />
+Four squares: programs with and without feature dependency. </em></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table width="100%" border="1">
+
+          <tr>
+            <td colspan="3"><h4 align="center">SOURCE CODES OF PROGRAMS</h4></td>
+            </tr>
+          <tr>
+            <td width="46%"><p><em><strong>Latin Square 2 x2:
+              
+              
+                  </strong><br />
+            </em></p></td>
+            
+            <td width="26%"><h5>Domain 1 -   Product control program   <br />
+            </h5></td>
+            
+            <td width="28%"><h5>Domain 2 -   Vaccine control program   <br />
+            </h5></td>
+            
+            </tr>
+
+          <tr>
+
+            <td><strong>Developer 1</strong></td>
+
+            <td><a href="english/cod04/codigoAtividade01.php" target="_blank"><em>with feature dependency.</em></a></td>
+
+            <td><a href="english/cod01/codigoAtividade01.php" target="_blank"><em>without feature dependency.</em></a></td>
+
+            </tr>
+
+          <tr>
+
+            <td><strong>Developer 2</strong></td>
+
+            <td><a href="english/cod03/codigoAtividade01.php" target="_blank"><em>without feature dependency.</em></a></td>
+
+            <td><a href="english/cod02/codigoAtividade01.php" target="_blank"><em>with feature dependency.</em></a></td>
+
+            </tr>
+
+        </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3"><table width="100%" border="0">
+
+          <tr>
+
+            <td width="40%"><table width="100%" border="1" cellspacing="1">
+              <tr>
+                <td colspan="3"><h4 align="center">TASKS OF PROGRAMS</h4></td>
+                </tr>
+              <tr>
+                <td width="25%"><h3>Tasks</h3></td>
+                <td width="33%"><h3><em><strong>with</strong> feature dependency.</em></h3></td>
+                <td><h3><em><strong>without</strong> feature dependency.</em></h3></td>
+              </tr>
+              <tr>
+                <td rowspan="3" bgcolor="#DEDBD7">Domain 1- Product control program</td>
+                <td bgcolor="#DEDBD7"><a href="english/cod02/atividade01.html" target="_blank"></a><a href="english/cod04/atividade01.html" target="_blank">Task 1</a></td>
+                <td bgcolor="#DEDBD7"><a href="english/cod01/atividade01.html" target="_blank">Task 1</a></td>
+              </tr>
+              <tr>
+                <td bgcolor="#DEDBD7"><a href="english/cod02/atividade02.html" target="_blank"></a><a href="english/cod04/atividade02.html" target="_blank">Task 2</a></td>
+                <td bgcolor="#DEDBD7"><a href="english/cod01/atividade02.html" target="_blank">Task 2</a></td>
+              </tr>
+              <tr>
+                <td bgcolor="#DEDBD7"><a href="english/cod02/atividade03.html" target="_blank"></a><a href="english/cod04/atividade03.html" target="_blank">Task 3</a></td>
+                <td bgcolor="#DEDBD7"><a href="english/cod01/atividade03.html" target="_blank">Task 3</a></td>
+              </tr>
+              <tr>
+                <td rowspan="3">Domain 2 -   Vaccine control program </td>
+                <td><a href="english/cod02/atividade01.html" target="_blank">Task 1</a><a href="english/cod04/atividade01.html" target="_blank"></a></td>
+                <td><a href="english/cod03/atividade01.html" target="_blank">Task 1</a></td>
+              </tr>
+              <tr>
+                <td><a href="english/cod02/atividade02.html" target="_blank">Task 2 </a><a href="english/cod04/atividade02.html" target="_blank"></a></td>
+                <td><a href="english/cod03/atividade02.html" target="_blank">Task 2</a></td>
+              </tr>
+              <tr>
+                <td><a href="english/cod02/atividade03.html" target="_blank">Task 3</a><a href="english/cod04/atividade03.html" target="_blank"></a></td>
+                <td><a href="english/cod03/atividade03.html" target="_blank">Task 3</a></td>
+              </tr>
+              <tr>
+                <td colspan="3"><h4 align="center">TASKS AND SOURCE CODES OF PROGRAMS</h4></td>
+                </tr>
+              <tr>
+                <td>Domain 1- Product control program</td>
+                <td><a href="english/atividadeWEB1.php" target="_blank">Task + source code</a></td>
+                <td><a href="english/atividadeWEB2.php" target="_blank">Task + source code</a></td>
+              </tr>
+              <tr>
+                <td>Domain 2 -   Vaccine control program </td>
+                <td><a href="english/atividadeWEB3.php" target="_blank"> Task + source code </a></td>
+                <td><a href="english/atividadeWEB4.php" target="_blank">Task + source code </a></td>
+              </tr>
+            </table></td>
+
+            </tr>
+
+        </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td colspan="3">&nbsp;</td>
+
+      </tr>
+
+    </table></td>
+
+    <td width="15%" bgcolor="#CCCCCC">&nbsp;</td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

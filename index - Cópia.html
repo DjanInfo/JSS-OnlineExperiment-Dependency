@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>How Does Feature Dependency Affect Configurable System Comprehensibility?</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body class="style.css">
+<table width="100%" border="0">
+  <tr>
+    <td width="15%" bgcolor="#CCCCCC">&nbsp;</td>
+    <td><table width="100%">
+      <tr>
+        <td width="200"><img src="image/icpc.png" width="200" height="60" alt="icpc" /></td>
+        <td width="625"><h2 align="center">How Does Feature Dependency Affect Configurable System Comprehensibility?</h2></td>
+        <td width="200"><img src="image/icse.png" width="200" height="73" alt="icse" /></td>
+      </tr>
+      <tr>
+        <td colspan="3"><h3>Author : Djan Santos and Cláudio Sant'Anna</h3></td>
+      </tr>
+      <tr>
+        <td colspan="3"><h3>Abstract :</h3></td>
+      </tr>
+      <tr>
+        <td colspan="3"><table cellspacing="0" id="ec:table1" cellpadding="0">
+          <tbody>
+            <tr id="row18">
+              <td align="justify"><br />
+                <strong>Background</strong>: Conditional compilation is often used to implement variability in configurable systems. This technique relies on #ifdefs to delimit feature code. Previous studies have shown that #ifdefs may hinder code comprehensibility. However, they did not explicitly took feature dependencies into account. Feature dependency occurs when different features refer to the same program element, such as a variable. Comprehensibility may be even more affected in the presence of feature dependency, as the developer must reason about different scenarios affecting the same variable. <strong>Aim</strong>: Our goal is to understand how feature dependency affects the comprehensibility of configurable system source code. <strong>Method</strong>: We carried out an experiment in which 30 developers debugged programs with different types of feature dependency. We record the time each of them spent to find a bug. Also, we used an eye-tracking device to record developers' gaze movements while they debugged programs. <strong>Results</strong>: It took longer for developers to debug programs with global and interprocedural dependency. In addition, debugging programs with these same types of dependencies required higher visual effort. <strong>Conclusion</strong>: Our study showed that #ifdefs affect comprehensibility in different degrees according with the type of feature dependencies. Therefore, when possible, developers should prefer to use intraprocedural dependency and take more care when dealing with code with global and interprocedural dependency.</td>
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <strong>Procedure:</strong>
+          <p> 1 -  training on variability, features and configurations; <br />
+2 -  <a href="domains/training.png" target="_blank">warm-up</a> task; <br />
+3 - presentation about the goal of the experiment and the risk of participation; <br />
+4 - sign the consent forms; <br />
+5 -  calibrate  eye-tracking device; <br />
+6 -   perform the task in order based in Latin square group; </p></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3">Source codes of our experiment: </td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="100%" border="1">
+          <tr>
+            <td width="40%" rowspan="2"><p><em>Latin Square 6 x6:
+              Row = Groups, Column = Variability Bugs<br />
+              Characteristic = acronyms. </em></p></td>
+            <td colspan="6"><p align="center"><strong>Variability Bugs</strong></p></td>
+          </tr>
+          <tr>
+            <td width="10%"><h5>Null pointer dereference</h5></td>
+            <td width="10%"><h5>Assertion error</h5></td>
+            <td width="10%"><h5>Logic error</h5></td>
+            <td><h5>Nested feature</h5></td>
+            <td><h5>Undefined variable</h5></td>
+            <td><h5>Uninitialized variable</h5></td>
+          </tr>
+          <tr>
+            <td><strong>Group 1</strong></td>
+            <td><a href="domains/A_I.png" target="_blank">GI</a></td>
+            <td><a href="domains/B_II.png" target="_blank">GW</a></td>
+            <td><a href="domains/C_III.png" target="_blank">IAI</a></td>
+            <td><a href="domains/D_IV.png" target="_blank">IAW</a></td>
+            <td><a href="domains/E_V.png" target="_blank">IEI</a></td>
+            <td><a href="domains/F_VI.png" target="_blank">IEW</a></td>
+          </tr>
+          <tr>
+            <td><strong>Group 2</strong></td>
+            <td><a href="domains/A_II.png" target="_blank">GW</a></td>
+            <td><a href="domains/B_III.png" target="_blank">IAI</a><a href="domains/B_I.png" target="_blank"></a></td>
+            <td><a href="domains/C_II.png" target="_blank"></a><a href="domains/C_IV.png" target="_blank">IAW</a></td>
+            <td><a href="domains/D_V.png" target="_blank">IEI</a></td>
+            <td><a href="domains/E_VI.png" target="_blank">IEW</a></td>
+            <td><a href="domains/F_I.png" target="_blank">GI</a></td>
+          </tr>
+          <tr>
+            <td><strong>Group 3</strong></td>
+            <td><a href="domains/A_III.png" target="_blank">IAI</a></td>
+            <td><a href="domains/B_IV.png" target="_blank">IAW</a><a href="domains/B_VI.png" target="_blank"></a></td>
+            <td><a href="domains/C_V.png" target="_blank">IEI</a><a href="domains/C_I.png" target="_blank"></a></td>
+            <td><a href="domains/D_IV.png" target="_blank">IEW</a></td>
+            <td><a href="domains/E_I.png"  target="_blank">GI</a></td>
+            <td><a href="domains/F_II.png" target="_blank">GW</a></td>
+          </tr>
+          <tr>
+            <td><strong>Group 4</strong></td>
+            <td><a href="domains/A_IV.png" target="_blank">IAW</a></td>
+            <td><a href="domains/B_V.png" target="_blank">IEI</a></td>
+            <td><a href="domains/C_VI.png" target="_blank">IEW</a></td>
+            <td><a href="domains/D_I.png" target="_blank">GI</a></td>
+            <td><a href="domains/E_II.png" target="_blank">GW</a></td>
+            <td><a href="domains/F_III.png" target="_blank">IAI</a></td>
+          </tr>
+          <tr>
+            <td><strong>Group 5</strong></td>
+            <td><a href="domains/A_V.png" target="_blank">IEI</a><a href="domains/A_VI.png" target="_blank"></a></td>
+            <td><a href="domains/B_IV.png" target="_blank"></a><a href="domains/B_VI.png" target="_blank">IEW</a></td>
+            <td><a href="domains/C_I.png" target="_blank">GI</a></td>
+            <td><a href="domains/D_II.png" target="_blank">GW</a></td>
+            <td><a href="domains/E_III.png" target="_blank">IAI</a></td>
+            <td><a href="domains/F_IV.png" target="_blank">IAW</a></td>
+          </tr>
+          <tr>
+            <td><strong>Group 6</strong></td>
+            <td><a href="domains/A_VI.png" target="_blank">IEW</a></td>
+            <td><a href="domains/B_III.png" target="_blank"></a><a href="domains/B_I.png" target="_blank">GI</a></td>
+            <td><a href="domains/C_II.png" target="_blank">GW</a></td>
+            <td><a href="domains/D_III.png" target="_blank">IAI</a></td>
+            <td><a href="domains/E_IV.png" target="_blank">IAW</a></td>
+            <td><a href="domains/F_V.png" target="_blank">IEI</a></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="100%" border="0">
+          <tr>
+            <td width="40%" rowspan="4"><strong>Tasks: find the bug in source codes with different Caracteristics:</strong></td>
+            <td width="30%">with #IFDEF</td>
+            <td width="20">without #IFDEF</td>
+          </tr>
+          <tr>
+            <td>GI - Global dependency </td>
+            <td>GW - Global dependency equivalent</td>
+          </tr>
+          <tr>
+            <td>IAI - Intraprocedural dependency</td>
+            <td>IAW - Intraprocedural ependency equivalent</td>
+          </tr>
+          <tr>
+            <td>IEI - Interprocedural dependency</td>
+            <td>IEW - Interprocedural dependency equivalent</td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="100%" border="1">
+          <tr>
+            <td align="center"><h3>Quantitative collected data </h3></td>
+            <td align="center"><h3>Script R</h3></td>
+            <td align="center"><h3>Attention map and gaze transitions diagram</h3></td>
+          </tr>
+          <tr>
+            <td><a href="r/LS_TIME.txt" target="_blank">Time to find bugs<br />
+            </a><a href="r/time.R" target="_blank"></a></td>
+            <td><a href="r/time.R" target="_blank">Time.R</a><a href="image/heat_global.jpg" target="_blank"></a></td>
+            <td><a href="image/heat_global.jpg" target="_blank">Attention map - Global Dependency</a><a href="image/globalgaze.jpg" target="_blank"></a></td>
+          </tr>
+          <tr>
+            <td><a href="r/CORRECT.txt" target="_blank">Correctly found bugs</a><br />
+              <a href="r/correctly.R" target="_blank"></a></td>
+            <td><a href="r/correctly.R" target="_blank">Correctly.R</a></td>
+            <td><a href="image/heat_intra.jpg" target="_blank">Attention map - Intraprocedural Dependency</a><a href="image/intragaze.jpg" target="_blank"></a></td>
+          </tr>
+          <tr>
+            <td><a href="r/FIXATION.txt" target="_blank">Number of fixations </a><br />
+              <a href="r/fixations.R" target="_blank"></a></td>
+            <td><a href="r/fixations.R" target="_blank">Fixations.R</a><a href="image/heat_inter.jpg" target="_blank"></a></td>
+            <td><a href="image/heat_inter.jpg" target="_blank">Attention map - Interprocedural Dependency</a></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="100%" cellspacing="1">
+          <tr>
+            <td colspan="3">&nbsp;</td>
+            </tr>
+          <tr>
+            <td><h3>Gaze transitions:</h3></td>
+            <td><a href="image/gazeTransitions_1.jpg" target="_blank">Gaze transitions - Null pointer dereference</a></td>
+            <td><a href="image/gazeTransitions_2.jpg" target="_blank">Gaze transitions - Nested feature</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><a href="image/gazeTransitions_3.jpg" target="_blank">Gaze transitions - Uninitialized variable</a></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3">&nbsp;</td>
+            </tr>
+          <tr>
+            <td width="25%"><h3>Variability Bugs</h3></td>
+            <td width="33%"><h3>AOIs</h3></td>
+            <td><h3>Attention maps</h3></td>
+            </tr>
+          <tr>
+            <td rowspan="3" bgcolor="#DEDBD7">Null pointer dereference</td>
+            <td bgcolor="#DEDBD7"><a href="image/AOI_global.jpg" target="_blank">AOIs - Global dependency</a></td>
+            <td bgcolor="#DEDBD7"> <a href="image/A_global_m.jpg" target="_blank">Attention map  - Global Dependency</a></td>
+            </tr>
+          <tr>
+            <td bgcolor="#DEDBD7"><a href="image/AOI_intraprocedural.jpg" target="_blank">AOIs - Intraprocedural dependency</a></td>
+            <td bgcolor="#DEDBD7"><a href="image/A_intra_m.jpg" target="_blank">Attention map  - Intraprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td bgcolor="#DEDBD7"><a href="image/AOI_interprocedural.jpg" target="_blank">AOIs - Interprocedural dependency</a></td>
+            <td bgcolor="#DEDBD7"><a href="image/A_inter_m.jpg" target="_blank">Attention map  - Interprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td rowspan="3">Assertion error</td>
+            <td><a href="image/B_global.jpg" target="_blank">AOIs - Global dependency</a></td>
+            <td> <a href="image/B_global_m.jpg" target="_blank">Attention map  - Global Dependency</a></td>
+            </tr>
+          <tr>
+            <td><a href="image/B_intra.jpg" target="_blank">AOIs - Intraprocedural dependency</a></td>
+            <td><a href="image/B_intra_m.jpg" target="_blank">Attention map  - Intraprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td><a href="image/B_inter.jpg" target="_blank">AOIs - Interprocedural dependency</a></td>
+            <td><a href="image/B_inter_m.jpg" target="_blank">Attention map  - Interprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td rowspan="3" bgcolor="#DEDBD7">Logic error</td>
+            <td bgcolor="#DEDBD7"><a href="image/C_global.jpg" target="_blank">AOIs - Global dependency</a></td>
+            <td bgcolor="#DEDBD7"><a href="image/C_global_m.jpg" target="_blank">Attention map  - Global Dependency</a></td>
+            </tr>
+          <tr>
+            <td bgcolor="#DEDBD7"><a href="image/C_intra.jpg" target="_blank">AOIs - Intraprocedural dependency</a></td>
+            <td bgcolor="#DEDBD7"><a href="image/C_intra_m.jpg" target="_blank">Attention map  - Intraprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td bgcolor="#DEDBD7"><a href="image/C_inter.jpg" target="_blank">AOIs - Interprocedural dependency</a></td>
+            <td bgcolor="#DEDBD7"><a href="image/C_inter_m.jpg" target="_blank">Attention map  - Interprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td rowspan="3">Nested feature</td>
+            <td><a href="image/D_global.jpg" target="_blank">AOIs - Global dependency</a></td>
+            <td><a href="image/D_global_m.jpg" target="_blank">Attention map  - Global Dependency</a></td>
+            </tr>
+          <tr>
+            <td><a href="image/D_intra.jpg" target="_blank">AOIs - Intraprocedural dependency</a></td>
+            <td><a href="image/D_intra_m.jpg" target="_blank">Attention map  - Intraprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td><a href="image/D_inter.jpg" target="_blank">AOIs - Interprocedural dependency</a></td>
+            <td><a href="image/D_inter_m.jpg" target="_blank">Attention map  - Interprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td rowspan="3" bgcolor="#DEDBD7">Undefined variable</td>
+            <td bgcolor="#DEDBD7"><a href="image/E_global.jpg" target="_blank">AOIs - Global dependency</a></td>
+            <td bgcolor="#DEDBD7"><a href="image/E_global_m.jpg" target="_blank">Attention map  - Global Dependency</a></td>
+            </tr>
+          <tr>
+            <td bgcolor="#DEDBD7"><a href="image/E_intra.jpg" target="_blank">AOIs - Intraprocedural dependency</a></td>
+            <td bgcolor="#DEDBD7"><a href="image/E_intra_m.jpg" target="_blank">Attention map  - Intraprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td bgcolor="#DEDBD7"><a href="image/E_inter.jpg" target="_blank">AOIs - Interprocedural dependency</a></td>
+            <td bgcolor="#DEDBD7"><a href="image/E_inter_m.jpg" target="_blank">Attention map  - Interprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td rowspan="3">Uninitialized variable</td>
+            <td><a href="image/F_global.jpg" target="_blank">AOIs - Global dependency</a></td>
+            <td><a href="image/F_global_m.jpg" target="_blank">Attention map  - Global Dependency</a></td>
+            </tr>
+          <tr>
+            <td><a href="image/F_intra.jpg" target="_blank">AOIs - Intraprocedural dependency</a></td>
+            <td><a href="image/F_intra_m.jpg" target="_blank">Attention map  - Intraprocedural Dependency</a></td>
+            </tr>
+          <tr>
+            <td><a href="image/F_inter.jpg" target="_blank">AOIs - Interprocedural dependency</a></td>
+            <td><a href="image/F_inter_m.jpg" target="_blank">Attention map  - Interprocedural Dependency</a></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table></td>
+    <td width="15%" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
